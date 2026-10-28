@@ -1,0 +1,32 @@
+# dependencies & build output
+node_modules/
+app/dist/
+app-orgin/dist/
+bin/
+
+# 网页端构建产物由 make web 复制进来，只提交占位页
+server/internal/web/dist/*
+!server/internal/web/dist/placeholder.html
+
+# local runtime data
+/data/
+server/data/
+*.db
+*.db-wal
+*.db-shm
+
+# editors & OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# app 端测试产物
+app/test-results/
+app/playwright-report/
+# Playwright 端到端测试的后端程序和数据目录（app/playwright.config.ts）
+/.e2e-tmp/
+/dist/
+
+# v1.12: the license signing key never goes in the repository
+private.key

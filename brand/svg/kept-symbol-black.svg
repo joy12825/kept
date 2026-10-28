@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461 459" width="1024" height="1024"><title>Kept / 收好 — 手绘矢量还原</title><defs>
+<linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0864FF"/><stop offset="1" stop-color="#0054F5"/></linearGradient>
+<linearGradient id="top" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#F4F8FF"/><stop offset="1" stop-color="#DFEAFF"/></linearGradient>
+<linearGradient id="side" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#D7E6FF"/><stop offset="1" stop-color="#C6DCFF"/></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#EDF5FF"/><stop offset="1" stop-color="#BCD5FF"/></linearGradient>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF2FF"/></linearGradient>
+</defs><g transform="translate(0.0 0.0) scale(1)"><g id="cabinet-drawer-files">
+<path fill="#080B10" d="M79 144 Q64 150 63 169 L64 291 Q64 306 75 312 L151 350 Q163 356 175 350 L190 342 L163 183 Z"/>
+<path fill="#080B10" d="M79 144 L216 112 Q228 109 239 113 L306 135 Q320 140 322 154 L322 199 L310 205 L309 158 Q309 148 298 150 L179 181 Q162 186 162 205 L163 337 Q163 347 175 350 L190 342 L181 350 Q168 356 157 350 L151 347 L151 190 Z"/>
+<path fill="#FFFFFF" d="M181 181 L299 150 Q312 146 312 159 L313 206 L335 220 L204 359 L175 345 Q163 341 163 330 L163 205 Q163 187 181 181 Z"/>
+<path fill="#080B10" d="M177 231 L305 195 Q313 192 322 196 L379 216 Q389 219 390 228 L225 281 L170 245 Q160 239 177 231 Z"/>
+<path fill="#FFFFFF" d="M182 237 L309 202 L368 222 L223 269 Z"/>
+<path fill="#080B10" d="M196 207 Q196 197 207 194 L291 168 Q303 164 303 177 L304 231 L219 260 L196 248 Z"/>
+<path fill="#080B10" d="M204 207 L291 181 Q302 177 303 187 L303 232 L219 258 L204 251 Z"/>
+<path fill="#080B10" d="M221 207 L319 178 Q333 174 334 188 L335 231 L221 268 L221 225 Q221 212 221 207 Z"/>
+<path fill="#080B10" d="M231 208 L321 182 Q334 179 334 190 L334 218 L221 254 L221 226 Q221 213 231 208 Z"/>
+<path fill="#080B10" d="M221 254 L335 218 L335 229 L223 267 L205 260 Z"/>
+<path fill="#080B10" d="M222 267 L367 217 Q378 213 386 219 L391 225 L391 311 Q391 324 378 330 L233 380 Q219 386 213 374 L211 284 Q211 272 222 267 Z"/>
+<path fill="#080B10" d="M230 265 L375 218 Q392 213 392 232 L392 309 Q392 323 379 328 L234 380 Q212 389 212 366 L212 287 Q212 272 230 265 Z"/>
+<path d="M203 245 L203 209 Q203 202 211 200 L294 175 M222 254 L333 219 M225 266 L374 218" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+<path fill="#FFFFFF" d="M292 291 L329 278 Q340 274 341 285 Q343 296 333 300 L296 313 Q283 318 282 307 Q281 296 292 291 Z"/>
+</g></g></svg>

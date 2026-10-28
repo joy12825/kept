@@ -1,0 +1,13 @@
+# 由 `make generate` 调用：go tool -modfile=tools/go.mod oapi-codegen -config internal/api/oapi-codegen.yaml ../api/openapi.yaml
+package: gen
+output: internal/api/gen/api.gen.go
+generate:
+  std-http-server: true
+  strict-server: true
+  models: true
+  embedded-spec: true
+compatibility:
+  always-prefix-enum-values: true
+output-options:
+  # keep schemas that no operation references yet (e.g. Error)
+  skip-prune: true

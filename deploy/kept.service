@@ -1,0 +1,28 @@
+# 收好（kept）的 systemd 服务（二进制部署）。install.sh 会把它装到 /etc/systemd/system/kept.service。
+[Unit]
+Description=收好（kept）文档管理
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kept
+Group=kept
+EnvironmentFile=/etc/kept/kept.env
+ExecStart=/usr/local/bin/kept serve
+# 收到 SIGTERM 后等待进行中的任务（KEPT_SHUTDOWN_TIMEOUT，默认 30s），这里多给 10 秒。
+KillSignal=SIGTERM
+TimeoutStopSec=40
+Restart=on-failure
+RestartSec=5
+# 数据目录 /var/lib/kept 由 systemd 创建并归 kept 用户所有。
+StateDirectory=kept
+StateDirectoryMode=0750
+WorkingDirectory=/var/lib/kept
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

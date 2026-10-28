@@ -1,0 +1,17 @@
+# 镜像只需要 app/ 和 server/ 的源码
+**/node_modules
+**/.DS_Store
+.git
+app/dist
+app/test-results
+app/playwright-report
+app-orgin
+wenxia-app
+docs
+*.zip
+文档管理系统原型设计*
+server/bin
+server/data
+**/*.db
+**/*.db-wal
+**/*.db-shm

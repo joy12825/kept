@@ -1,0 +1,46 @@
+# 收好（kept）的 docker compose 示例。
+#   docker compose -f deploy/docker-compose.yml up -d --build
+# 需要 Office 文档（Word、Excel、PowerPoint……）入库时，同时启动 Gotenberg：
+#   docker compose -f deploy/docker-compose.yml --profile office up -d --build
+# 并把下面 KEPT_GOTENBERG_URL 一行的注释去掉。
+
+services:
+  kept:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: kept:latest
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - kept-data:/data
+      # 监听目录与备份目录（可选）：换成主机或 NAS 上的路径，并去掉下面对应环境变量的注释
+      # - /mnt/nas/scans:/consume
+      # - /mnt/nas/kept-backups:/backups
+    environment:
+      TZ: Asia/Shanghai
+      # KEPT_WORKERS: "2"
+      # KEPT_OCR_LANGUAGES: chi_sim+eng
+      # KEPT_MAX_UPLOAD_SIZE: 200MB
+      # KEPT_GOTENBERG_URL: http://gotenberg:3000
+      # KEPT_CONSUME_DIR: /consume
+      # KEPT_BACKUP_DIR: /backups
+      # KEPT_PUBLIC_URLS: http://192.168.1.10:8000
+      # KEPT_SMTP_HOST: smtp.example.com
+      # KEPT_SMTP_PORT: "465"
+      # KEPT_SMTP_USERNAME: kept@example.com
+      # KEPT_SMTP_PASSWORD: 授权码
+      # KEPT_SMTP_FROM: 收好 <kept@example.com>
+    # 停止时等待进行中的任务（KEPT_SHUTDOWN_TIMEOUT 默认 30s）
+    stop_grace_period: 40s
+
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    profiles: ["office"]
+    restart: unless-stopped
+    # 只在内部网络中供 kept 调用，不对外暴露端口
+    command: ["gotenberg", "--api-timeout=120s"]
+
+volumes:
+  kept-data:
