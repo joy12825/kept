@@ -16,6 +16,21 @@
 
 收好另有收费版和企业版，加上 AI、家人的私密文档与紧急访问、场景、外部存储与云端加密、邮件收取、工作流、分享增强，以及单点登录、配额等团队功能。这些部分不在这个仓库里。开源版能读取、解密、搬回由官方版本留下的数据，换过来也不会丢东西。
 
+## 界面预览
+
+<table>
+<tr>
+<td><img src="docs/screenshots/web-home.jpg" alt="首页：待处理、提醒、各个抽屉一眼看全"></td>
+<td><img src="docs/screenshots/web-inbox.jpg" alt="待整理：自动识别类型、往来方、金额，逐份确认"></td>
+</tr>
+<tr>
+<td><img src="docs/screenshots/web-search.jpg" alt="全文搜索：纸上的字也能搜，支持拼音查找"></td>
+<td><img src="docs/screenshots/web-drawer.jpg" alt="抽屉：按生活事务分类，要点和到期提醒一目了然"></td>
+</tr>
+</table>
+
+<img src="docs/screenshots/ios-cabinet.jpg" alt="iOS App：随时查阅，手机拍照上传" width="260">
+
 ## 快速开始
 
 用 Docker（只需一个数据卷）：
